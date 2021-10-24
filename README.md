@@ -7,7 +7,7 @@ sudo usermod -aG docker ${USER}
 ```
 5. Execute the image.
 ```bash
-xhost +;docker run -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro --shm-size=512M -v "$(pwd)":/home/matlab/MATLAB/Projects/ mathworks/matlab:r2021b
+cd ~/Documents/Nottingham/ML/ml-labs/;xhost +;docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro --shm-size=512M -v "$(pwd)":/home/matlab/MATLAB/Projects/ mathworks/matlab:deb-1
 ```
 7. The MATLAB desktop window should open on your machine. Note that the command above works only on a Linux operating system with X11 and its dependencies installed.
 8. Enyoy!
